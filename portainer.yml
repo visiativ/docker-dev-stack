@@ -1,11 +1,11 @@
 version: '3'
 services:
   portainer:
-    container_name: portainer
     image: portainer/portainer
+    restart: ${RESTART_POLICY}
     volumes:
       - ~/volumes/portainer/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
+    restart: ${RESTART_POLICY}
     ports:
       - '9000:9000'

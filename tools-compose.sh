@@ -13,6 +13,8 @@ cat << "EOF"
 
 EOF
 
+export RESTART_POLICY=$DOCKER_COMPOSE_TOOLS_RESTART_POLICY
+
 # docker version;
 # docker-compose version;
 

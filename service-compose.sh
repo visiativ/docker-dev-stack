@@ -12,6 +12,8 @@ cat << "EOF"
                                 |_|   |_|                                                   
 EOF
 
+export RESTART_POLICY=$DOCKER_COMPOSE_SERVICES_RESTART_POLICY
+
 docker-compose \
 	-f consul.yml \
 	-f keycloak.yml \

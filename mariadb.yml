@@ -2,6 +2,7 @@ version: '3'
 services:
   mariadb:
     image: mariadb:10.4
+    restart: ${RESTART_POLICY}
     volumes:
         - ./mariadb/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
         - ./mariadb/data:/var/lib/mysql

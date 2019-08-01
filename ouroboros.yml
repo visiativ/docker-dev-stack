@@ -1,14 +1,12 @@
 version: '3'
 services:
   ouroboros:
-    container_name: ouroboros
-    hostname: ouroboros
     image: pyouroboros/ouroboros
+    restart: ${RESTART_POLICY}
     environment:
       - CLEANUP=true
       - INTERVAL=60
       - LOG_LEVEL=info
       - SELF_UPDATE=true
-    restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

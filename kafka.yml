@@ -2,6 +2,7 @@ version: '3'
 services:
   zookeeper:
     image: wurstmeister/zookeeper
+    restart: ${RESTART_POLICY}
 #    ports:
 #      - "2181:2181"
     networks:
