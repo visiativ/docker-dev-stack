@@ -1,2 +1,12 @@
 mariadb/data
 mongodb/data
+
+# JBoss deployement files
+*.dodeploy
+*.skipdeploy
+*.isdeploying
+*.deployed
+*.failed
+*.isundeploying
+*.undeployed
+*.pending

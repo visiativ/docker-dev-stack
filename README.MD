@@ -8,5 +8,5 @@ In this project each service is split into it's hown
 
 This is split into multiple script: 
 
-* service-compose.sh
-* tools-compose.sh : wrap 
+* service-compose.sh : wrap services we use like databases
+* tools-compose.sh : wrap tools docker like graphical tools
