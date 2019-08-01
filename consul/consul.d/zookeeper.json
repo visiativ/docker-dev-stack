@@ -1,0 +1,17 @@
+{  
+   "service":{  
+      "name":"zookeeper",
+      "address": "zookeeper",
+      "port":2181,
+      "tags":[],
+      "meta": {
+         "meta": "The zookeeper local instance."
+      },
+      "checks": [
+         {
+           "tcp": "zookeeper:2181",
+           "interval": "10s"
+         }
+      ]
+   }
+}

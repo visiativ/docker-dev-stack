@@ -1,0 +1,17 @@
+{  
+   "service":{  
+      "name":"kafka",
+      "address": "kafka",
+      "port":9092,
+      "tags":[],
+      "meta": {
+         "meta": "The kafaka local instance."
+      },
+      "checks": [
+         {
+           "tcp": "kafka:9092",
+           "interval": "10s"
+         }
+      ]
+   }
+}

@@ -1,0 +1,17 @@
+{  
+   "service":{  
+      "name":"mariadb",
+      "address": "mariadb",
+      "port":3306,
+      "tags":[],
+      "meta": {
+         "meta": "The mariadb local instance."
+      },
+      "checks": [
+         {
+           "tcp": "mariadb:3306",
+           "interval": "10s"
+         }
+      ]
+   }
+}

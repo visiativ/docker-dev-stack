@@ -1,0 +1,17 @@
+{  
+   "service":{  
+      "name":"mongo",
+      "address": "mongodb",
+      "port":27017,
+      "tags":[],
+      "meta": {
+         "meta": "The mongodb local instance."
+      },
+      "checks": [
+         {
+           "tcp": "mongodb:27017",
+           "interval": "10s"
+         }
+      ]
+   }
+}

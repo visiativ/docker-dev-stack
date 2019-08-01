@@ -1,0 +1,17 @@
+version: '3'
+services:
+  consul:
+    image: consul:1.5
+    ports:
+      - 8300:8300 # Gossip
+      - 8500:8500 # Web
+      - 8600:8600 # DNS
+    volumes:
+      - ./consul/consul.d:/consul/consul.d
+    command: consul agent -node ${CONSUL_NODE_NAME} -enable-script-checks -config-dir=/consul/consul.d -log-level info -dev -ui -client 0.0.0.0
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

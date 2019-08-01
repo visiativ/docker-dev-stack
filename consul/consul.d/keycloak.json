@@ -1,0 +1,21 @@
+{  
+   "service":{  
+      "name":"keycloak",
+      "address": "keycloak",
+      "port":9080,
+      "tags":[],
+      "meta": {
+         "meta": "The keycloak local instance."
+      },
+      "checks": [
+         {
+            "tcp": "keycloak:9080",
+            "interval": "10s"
+         },
+         {
+            "tcp": "keycloak:9443",
+            "interval": "10s"
+         }
+      ]
+   }
+}
