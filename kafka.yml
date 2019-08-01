@@ -5,7 +5,7 @@ services:
 #    ports:
 #      - "2181:2181"
     networks:
-      - consul
+      - backend
 
   kafka:
     image: wurstmeister/kafka
