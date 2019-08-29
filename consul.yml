@@ -12,7 +12,7 @@ services:
     command: consul agent -node ${CONSUL_NODE_NAME} -enable-script-checks -config-dir=/consul/consul.d -log-level info -dev -ui -client 0.0.0.0
     networks:
       - backend
-
+      
 networks:
   backend:
     driver: bridge
