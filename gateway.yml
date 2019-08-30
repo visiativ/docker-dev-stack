@@ -1,13 +1,16 @@
 version: '3'
 services:
   gateway:
-    image: dregistry.moovapps.com/visiativ/process/moovapps-zuul-gateway:nightly
+    image: dregistry.moovapps.com/visiativ/process/moovapps-zuul-gateway:develop
     restart: ${RESTART_POLICY}
     ports:
       - '80:8080'
+    env_file:
+      - consul.env
     networks:
       - backend
 
 networks:
   backend:
-    driver: bridge
+    external:
+      name: moovapps-backend

@@ -11,8 +11,11 @@ services:
       - ./consul/consul.d:/consul/consul.d
     command: consul agent -node ${CONSUL_NODE_NAME} -enable-script-checks -config-dir=/consul/consul.d -log-level info -dev -ui -client 0.0.0.0
     networks:
-      - backend
+      backend:
+        aliases:
+          - consul
       
 networks:
   backend:
-    driver: bridge
+    external:
+      name: moovapps-backend

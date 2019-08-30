@@ -18,6 +18,8 @@ export RESTART_POLICY=$DOCKER_COMPOSE_TOOLS_RESTART_POLICY
 # docker version;
 # docker-compose version;
 
+docker network create --driver=bridge moovapps-backend || true; # || true force exit code tu success
+
 docker-compose \
 	-f portainer.yml \
 	-f ouroboros.yml \

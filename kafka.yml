@@ -24,5 +24,6 @@ services:
 
 networks:
   backend:
-    driver: bridge
+    external:
+      name: moovapps-backend
     
