@@ -1,0 +1,8 @@
+version: '3'
+services:
+  maildev:
+    image: djfarrelly/maildev
+    restart: ${RESTART_POLICY}
+    ports:
+      - '1080:80'
+      - '1025:25'

@@ -22,6 +22,7 @@ docker network create --driver=bridge moovapps-backend || true; # || true force 
 
 docker-compose \
 	-f portainer.yml \
+	-f maildev.yml \
 	-f ouroboros.yml \
 	-p ${DOCKER_COMPOSE_TOOLS_PREFIX} \
     $@;
